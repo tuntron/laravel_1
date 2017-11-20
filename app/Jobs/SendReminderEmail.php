@@ -33,7 +33,7 @@ class SendReminderEmail implements ShouldQueue
     {
         //
         for($i=0;$i<10000;$i++){
-            Log::info('Test Jobs;');
+            $foo = Foo::findOrfail(1);
         }
     }
 }
