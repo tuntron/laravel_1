@@ -32,7 +32,6 @@ class SendReminderEmail implements ShouldQueue
     public function handle()
     {
         //
-        for($i=0;$i<10000;$i++){
             $flight = new Foo;
 
             $flight->id = rand(10,1000000);
@@ -40,6 +39,6 @@ class SendReminderEmail implements ShouldQueue
             $flight->name = 'chenchen'.rand(10,1000000);
 
             $flight->save();
-        }
+
     }
 }
