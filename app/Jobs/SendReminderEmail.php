@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\Log;
 
 class SendReminderEmail implements ShouldQueue
 {
@@ -29,5 +30,6 @@ class SendReminderEmail implements ShouldQueue
     public function handle()
     {
         //
+        Log::info('Test Jobs;');
     }
 }
