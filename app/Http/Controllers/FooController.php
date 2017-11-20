@@ -11,7 +11,7 @@ class FooController extends Controller
     //
     public function index()
     {
-        SendReminderEmail::dispatch();
+        $this->dispatch(new SendReminderEmail());
         return Foo::findOrfail(1);
     }
 
