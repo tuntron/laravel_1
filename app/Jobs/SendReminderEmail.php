@@ -32,6 +32,8 @@ class SendReminderEmail implements ShouldQueue
     public function handle()
     {
         //
-        Log::info('Test Jobs;');
+        for($i=0;$i<10000;$i++){
+            Log::info('Test Jobs;');
+        }
     }
 }
