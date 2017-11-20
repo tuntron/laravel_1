@@ -8,11 +8,10 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Foundation\Bus\Dispatchable;
 
 class SendReminderEmail implements ShouldQueue
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+    use InteractsWithQueue, Queueable, SerializesModels;
 
     protected $foo;
     /**
@@ -20,10 +19,9 @@ class SendReminderEmail implements ShouldQueue
      *
      * @return void
      */
-    public function __construct(Foo $foo)
+    public function __construct()
     {
         //
-        $this->foo =  $foo;
     }
 
     /**
