@@ -33,7 +33,13 @@ class SendReminderEmail implements ShouldQueue
     {
         //
         for($i=0;$i<10000;$i++){
-            $foo = Foo::findOrfail(1);
+            $flight = new Foo;
+
+            $flight->id = rand(10,1000000);
+
+            $flight->name = 'chenchen'.rand(10,1000000);
+
+            $flight->save();
         }
     }
 }
