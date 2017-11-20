@@ -11,11 +11,11 @@ class FooController extends Controller
     //
     public function index()
     {
-        //$foo = Foo::findOrfail(1);
+        $foo = Foo::findOrfail(1);
         for ($i=0;$i<10000;$i++){
             $this->dispatch(new SendReminderEmail());
         }
-        return 1;
+        return $foo;
     }
 
 	
