@@ -7,7 +7,7 @@ use App\Logs;
 class LogsController extends Controller
 {
     //
-	public index(){
+	public function index(){
 		
 		return Logs::findOrfail(1);
 	}
